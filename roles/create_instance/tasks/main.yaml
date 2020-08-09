@@ -11,6 +11,10 @@
         load_balancer_port: 80
         instance_port: 80
   register: elb
+ 
+- name: Display the elb Output
+  debug:
+    var: elb
 
 - name: Create EC2 instances
   ec2:
